@@ -1,4 +1,4 @@
-# svelte-free-icons
+# svelte-free-icons-brands
 
 The free-icons set is a collection of over 23,000 freely available icons for various design projects.
 
