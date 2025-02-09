@@ -1,6 +1,6 @@
 {
 	"name": "svelte-free-icons-light",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "svelte icon components for https://free-icons.github.io/free-icons/",
 	"repository": {
     	"type": "git",
