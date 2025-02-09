@@ -66,9 +66,9 @@ update_index_file() {
     # Check if the line already exists
     if ! grep -Fxq "$export_line" "$INDEX_FILE"; then
         echo "$export_line" >> "$INDEX_FILE"
-        echo "🔹 Added to index.ts: $export_line"
+        echo "Added to index.ts: $export_line"
     else
-        echo "⚠️  $component_name is already in index.ts, skipping."
+        echo "$component_name is already in index.ts, skipping."
     fi
 }
 
@@ -81,7 +81,7 @@ convert_svg_to_svelte() {
     component_name=$(convert_to_pascal_case "$base_name") # Convert to PascalCase
     local svelte_file="$OUTPUT_DIR/$component_name.svelte"
 
-    echo "🔄 Converting $svg_file to $svelte_file..."
+    echo "Converting $svg_file to $svelte_file..."
 
     # Read SVG content
     svg_content=$(cat "$svg_file")
@@ -98,7 +98,7 @@ convert_svg_to_svelte() {
 $svg_content
 EOF
 
-    echo "✅ Created: $svelte_file"
+    echo "Created: $svelte_file"
 
     # Add the component to index.ts
     update_index_file "$component_name"
@@ -111,4 +111,4 @@ for svg in "$INPUT_DIR"/svg/*.svg; do
     fi
 done
 
-echo "🎉 Conversion complete! Components are in '$OUTPUT_DIR', and 'index.ts' has been updated."
+echo "Conversion complete! Components are in '$OUTPUT_DIR', and 'index.ts' has been updated."
