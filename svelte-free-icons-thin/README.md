@@ -21,12 +21,12 @@ The free-icons contains 23661 icons grouped in the following way:
 
 The Svelte packages are named accordingly:
 
-- svelte-free-icons-brand
+- svelte-free-icons-brands
 - svelte-free-icons-thin
 - svelte-free-icons-light
 - svelte-free-icons-regular
 - svelte-free-icons-solid
-- svelte-free-icons-sharp-slight
+- svelte-free-icons-sharp-light
 - svelte-free-icons-sharp-regular
 - svelte-free-icons-sharp-solid
 
@@ -56,38 +56,39 @@ Pretty obvious !!! :)
 ### Install icons pack
 
 ```bash
-npm -i -D svelte-free-icons-brand
-npm -i -D svelte-free-icons-thin
-npm -i -D svelte-free-icons-light
-npm -i -D svelte-free-icons-regular
-npm -i -D svelte-free-icons-solid
-npm -i -D svelte-free-icons-sharp-slight
-npm -i -D svelte-free-icons-sharp-regular
-npm -i -D svelte-free-icons-sharp-solid
+npm i -D svelte-free-icons-brands
+npm i -D svelte-free-icons-thin
+npm i -D svelte-free-icons-light
+npm i -D svelte-free-icons-regular
+npm i -D svelte-free-icons-solid
+npm i -D svelte-free-icons-sharp-light
+npm i -D svelte-free-icons-sharp-regular
+npm i -D svelte-free-icons-sharp-solid
 ```
 
 ### import and use it in your .svelte component
 
 ```js
-import { Github } from 'svelte-free-icons-brand';
-import { Wifi } from 'svelte-free-icons-thin';
-import { SquareParking } from 'svelte-free-icons-light';
-import { CourtSport } from 'svelte-free-icons-regular';
-import { Command } from 'svelte-free-icons-solid';
-import { Diamon } from 'svelte-free-icons-sharp-slight';
-import { DoorOpen } from 'svelte-free-icons-sharp-regular';
-import { Dolphin } from 'svelte-free-icons-sharp-solid';
+<script lang="ts">
+    import { Github } from 'svelte-free-icons-brands';
+    import { Wifi } from 'svelte-free-icons-thin';
+    import { SquareParking } from 'svelte-free-icons-light';
+    import { CourtSport } from 'svelte-free-icons-regular';
+    import { Command } from 'svelte-free-icons-solid';
+    import { Diamond } from 'svelte-free-icons-sharp-light';
+    import { DoorOpen } from 'svelte-free-icons-sharp-regular';
+    import { Dolphin } from 'svelte-free-icons-sharp-solid';
+</script>
 ...
 ...
 ...
 
 <Github /> <!-- lighgray 1rem icon -->
-<Wifi />
-
+<Wifi color="green" size="3rem" />
 <SquareParking color="red" size="2rem" /> <!-- red 2rem icon -->
 <CourtSport class="my own class" /> <!-- specify your own classes -->
-<Command />
-<Diamon color="#080808" />
-<DoorOpen />
+<Command color="blue" />
+<Diamond color="#080808" />
+<DoorOpen size="32px" />
 <Dolphin color="blue" size="3rem" />
 ```
